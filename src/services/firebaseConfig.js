@@ -44,6 +44,7 @@ const register = async (email, password, displayName) => {
 const getUserData = () => {
   const user = auth.currentUser;
   if (user) {
+    console.log("fire : " + user);
     const { uid, displayName, email, photoURL } = user;
     // uid: The unique user ID
     // displayName: The display name of the user (if set)
@@ -56,6 +57,7 @@ const getUserData = () => {
   }
 };
 const usr = getUserData();
+
 console.log("user data : ", usr);
 const login = async (email, password) => {
   try {
